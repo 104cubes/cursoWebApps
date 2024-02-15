@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio JS12-Bis</title>
+</head>
+
+<body>
+    <input type="text" value="" id="texto">
+    <input type="button" value="Comprobar" onclick="info();">
+    <div id="mostrar"></div>
+    <script>
+        function info() {
+            let texto = document.getElementById('texto').value;
+            for (i=0;i<texto.length;i++){
+                document.getElementById('mostrar').innerHTML += "<br>" + texto[i];
+            }
+        }
+    </script>
+</body>
+
+</html>

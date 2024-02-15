@@ -1,0 +1,42 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <title>Ejercicio 9 - Información sobre cadenas</title>
+
+  <script type="text/javascript">
+    function info() {
+        //Recogemos texto
+      let texto = document.getElementById('texto').value;
+      // Lo mostramos entre "" en la pantalla (comilla simple primero)
+      let resultado = 'La cadena "' + texto + '"';
+      // Comprobar mayúsculas y minúsculas
+      if (texto == texto.toUpperCase()) {
+        resultado += " está formada sólo por mayúsculas";
+      }
+      else if (texto == texto.toLowerCase()) {
+        resultado += " está formada sólo por minúsculas";
+      }
+      else {
+        resultado += " está formada por mayúsculas y minúsculas";
+      }
+      return resultado;
+     
+    }
+    function valida(){
+      document.getElementById('resultado').innerHTML=info()
+    }
+    
+  </script>
+</head>
+<body>
+  
+  <input type="text" value="" id="texto">
+  <input type="button" value="Comprobar" onclick="valida();">
+  <div id="resultado"></div>
+</body>
+
+</html>
