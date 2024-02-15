@@ -3,14 +3,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-  
+
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
   <title>Ejercicio 9 - Información sobre cadenas</title>
 
-  <script type="text/javascript">
-    function info() {
-        //Recogemos texto
-      let texto = document.getElementById('texto').value;
+  <script>
+
+document.getElementsByTagName("p")[0];
+
+
+    function info(texto) {
+      //Recogemos texto
+
       // Lo mostramos entre "" en la pantalla (comilla simple primero)
       let resultado = 'La cadena "' + texto + '"';
       // Comprobar mayúsculas y minúsculas
@@ -24,19 +28,27 @@
         resultado += " está formada por mayúsculas y minúsculas";
       }
       return resultado;
-     
+
     }
-    function valida(){
-      document.getElementById('resultado').innerHTML=info()
+    function valida() {
+      document.getElementById('resultado').innerHTML = info(document.getElementById('texto').value)
     }
-    
+
   </script>
 </head>
+
 <body>
-  
+
   <input type="text" value="" id="texto">
   <input type="button" value="Comprobar" onclick="valida();">
-  <div id="resultado"></div>
+  <div id="resultado">
+    <div>
+      <ul>
+
+      </ul>
+    </div>
+  </div>
+
 </body>
 
 </html>

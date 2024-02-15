@@ -12,12 +12,17 @@
     <input type="button" value="Comprobar" onclick="info();">
     <div id="mostrar"></div>
     <script>
+    
         function info() {
+
             let texto = document.getElementById('texto').value;
-            for (i=0;i<texto.length;i++){
+            for (i = 0; i < texto.length; i++) {
                 document.getElementById('mostrar').innerHTML += "<br>" + texto[i];
             }
         }
+        info();
+
+        
     </script>
 </body>
 

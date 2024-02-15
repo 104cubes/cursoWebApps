@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol id="lista">
+        <li>Coca Cola</li>
+        <li>Fanta</li>
+        <li>Agua</li>
+        <li>Cerveza</li>
+        <li>Vino</li>
+        <li>Agua</li>
+    </ol>
+    introduce el número de la bebida a elegir:
+    <input type="number" min="1" max="5" id="numero">
+    <input type="button" value="Añadir elemento" onclick="elige();">
+    <div id="info"></div>
+
+<script>
+    function elige(){
+        let numElegido = document.getElementById('numero').value -1;
+        let lista = document.getElementsByTagName('li');
+        let elemento =lista[numElegido].innerHTML;
+        console.log(elemento);
+        alert("Has elegido: " + elemento)
+        document.getElementById('info').innerHTML = "Has elegido: " + elemento;
+        for (i=0;i<lista.length; i++){
+            if (i==numElegido)
+            alert("Has elegido: " + elemento);
+        }
+    }
+</script>
+
+</body>
+</html>

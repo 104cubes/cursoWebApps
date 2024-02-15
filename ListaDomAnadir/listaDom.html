@@ -1,0 +1,37 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Ejercicio 13 - DOM básico y atributos XHTML</title>
+    <script type="text/javascript">
+        function anade() {
+            var lista = document.getElementById("lista");
+            // una forma de hacerlo appendChild()
+            var elemento = document.createElement("li");
+            var textoAnadido = document.getElementById('texto').value;
+            var texto = document.createTextNode(textoAnadido);
+            elemento.appendChild(texto);
+            lista.appendChild(elemento);
+            /* Otra forma de hacerlo sin appendChild 
+            var texto = document.getElementById('texto').value;
+            var elemento = "<li>" + texto + "</li>";
+            lista.innerHTML = lista.innerHTML + elemento;*/
+        }
+    </script>
+</head>
+
+<body>
+    <ol id="lista">
+        <li>Coca Cola</li>
+        <li>Fanta</li>
+        <li>Agua</li>
+        <li>Cerveza</li>
+        <li>Vino</li>
+    </ol>
+    <input type="text" value="" id="texto">
+    <input type="button" value="Añadir elemento" onclick="anade();">
+
+</body>
+
+</html>
