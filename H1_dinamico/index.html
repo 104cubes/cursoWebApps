@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1, h3, p {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1></h1>
+    <h3 title="Hola Mundo">Escribe y verás:</h3>
+    <img src="jldkfnge.jfp" title="Hola title" alt="Hola Alt">
+    <p>
+    <input id="texto" type="text" onkeyup="escribe();">
+    </p>
+    <script>
+        function escribe() {
+            document.getElementsByTagName('h1')[0].innerHTML=document.getElementById('texto').value
+        }
+    </script>
+</body>
+
+</html>
