@@ -56,7 +56,7 @@
 <body>
 
 <h1>Cubre el formulario:</h1>
-<form id="form" onsubmit="return printFormulario()" action="#">
+<form onsubmit="return printFormulario();" id="form">
     <label for="nombre">Nombre:</label>
     <input type="text" id="nombre" name="nombre" required>
     
@@ -94,7 +94,7 @@
     <input type="submit" value="Enviar">
 </form>
 Datos entregados:
-<div id="datos" class="datos" data-miValor="100"></div>
+<div id="datos" class="datos"></div>
 <script>
     document.getElementById("nombre").focus();
    
@@ -109,9 +109,9 @@ Datos entregados:
         var email = document.getElementById('email').value;
         var interes = document.getElementById('interes').value;
         
-        var turno = document.querySelector('input[name="turno"]:checked')[0].value;
+        var turno = document.querySelector('input[name="turno"]:checked').value;
         var privacidad = document.getElementById('privacidad').checked;
-
+       
         // Validar que se haya seleccionado un turno
         if (!turno) {
             alert('Por favor, seleccione un turno');
