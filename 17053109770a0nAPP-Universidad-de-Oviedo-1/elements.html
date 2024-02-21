@@ -532,13 +532,22 @@ print 'It took ' + i + ' iterations to sort the deck.';
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script>
+				document.getElementById('elid').style.fontSize="17px";
+				$('#elid').css(
+					{
+						'font-size':'17px',
+						'width':'300px'
+					}
+				)
+				
+				</script>
 	</body>
 </html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parientes</title>
+    <style>
+        #main{
+            width: 70%;
+            height: 70vh;
+        }
+        #child{
+            width: 70%;
+            height: 40vh;
+        }
+        .subchild{
+            width: 25%;
+            height: 20vh;
+            float: left;
+        }
+        div{
+            border:1px solid black;
+            margin:10%
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="child">
+            <div class="subchild">
+
+            </div>
+            <div class="subchild">
+                
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(function(){
+            let main = $('body').children()
+            main.css('background-color','black')
+            let child = main.children();
+            child.css('background-color','#CCC')
+            let hermanos = child.children()
+            hermanos.css('background-color','red') 
+           
+        })
+    </script>
+</body>
+</html>

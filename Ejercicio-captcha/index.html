@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenido{
+            display: none;
+            position: absolute;
+            top:10px;
+            left:10px;
+            width:100%;
+            height: 90%;
+           
+        }
+        #ok{
+            background-color: aquamarine;
+        }
+        #ko {
+            background-color: goldenrod;
+        }
+        body{
+            padding:40px
+        }
+        img{
+            max-height: 80vh;
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+   <h2>
+    Hola, por seguridad vamos a perdirte que 
+    respondas a esta pregunta:
+</h2>
+<h3>
+    ¿Cuánto suma 9+4?
+</h3>
+ <div id="form">
+    <input type="number" id="resultado">
+    <input type="button" id="subm" value="Enviar">
+</div>
+<div id="ok" class="contenido">
+    <h1 style="text-align: center;">Genial!</h1>
+    <h2>Mira qué foto más chula!!</h2>
+    <img src="https://cdn.pixabay.com/photo/2024/01/04/21/54/volcano-8488486_1280.jpg">
+</div>
+<div id="ko" class="contenido">
+    <h1 style="text-align: center;">Prueba de nuevo</h1>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(function(){
+
+        function submForm(){
+            const resCorrecto = 13;
+            if ($('#resultado').val()!=resCorrecto){
+                $('#ko').append('<h2>El resultado <b>'+$('#resultado').val()+'<b> no escorrecto.</h2>Haz click para volver al formulario') ;
+                $('#ko').show(500)
+            }else{
+                $('#ok').show(500)
+                $('#ok').append('<h2>El resultado <b>'+$('#resultado').val()+'<b> es escorrecto!!</h2>Haz click para volver al formulario') ;   
+            }     
+        }
+        $('#subm').on('click',function(){
+            submForm()
+        })
+        $('.contenido').on('click',function(){
+            $(this).hide(500);
+        })
+       
+    })
+</script>
+</body>
+</html>
