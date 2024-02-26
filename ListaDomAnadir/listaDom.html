@@ -4,19 +4,20 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <title>Ejercicio 13 - DOM básico y atributos XHTML</title>
-    <script type="text/javascript">
+    <script>
         function anade() {
             var lista = document.getElementById("lista");
             // una forma de hacerlo appendChild()
-            var elemento = document.createElement("li");
+           /* var elemento = document.createElement("li");
             var textoAnadido = document.getElementById('texto').value;
             var texto = document.createTextNode(textoAnadido);
             elemento.appendChild(texto);
-            lista.appendChild(elemento);
-            /* Otra forma de hacerlo sin appendChild 
+            lista.appendChild(elemento);*/
+            // Otra forma de hacerlo sin appendChild 
             var texto = document.getElementById('texto').value;
             var elemento = "<li>" + texto + "</li>";
-            lista.innerHTML = lista.innerHTML + elemento;*/
+            let htmlActualdelaLista = lista.innerHTML;
+            lista.innerHTML = htmlActualdelaLista + elemento;
         }
     </script>
 </head>

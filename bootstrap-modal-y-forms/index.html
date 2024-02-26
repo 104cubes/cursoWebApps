@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,27 +50,7 @@
     </div>
     <button type="button" class="btn btn-success">Puedes darle</button>
     <button type="button" class="btn btn-danger"> X piénsatelo antes de pulsar</button>
-    <form action="#">
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" class="form-control" placeholder="Enter email" id="email">
-        </div>
-        <div class="form-group">
-          <label for="pwd">Password:</label>
-          <input type="password" class="form-control" placeholder="Enter password" id="pwd">
-        </div>
-        <h2>Demuestra que eres un humano</h2>
-        <div class="form-group">
-            <label for="pwd">Suma 5+9</label>
-            <input type="number" class="form-control" placeholder="suma..." id="pwd">
-          </div>
-        <div class="form-group form-check">
-          <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" required> Acepto
-          </label>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+ 
       <div id="demo" class="carousel slide" data-ride="carousel">
 
         <!-- Indicators -->
@@ -106,12 +85,6 @@
 
 
 
-
-
-
-
-
-
     <div class="modal fade" id="login">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -124,12 +97,31 @@
 
                 <!-- Modal body -->
                 <div class="modal-body">
-                    Modal body..
+                  <form action="#">
+                    <div class="form-group">
+                      <label for="email">Email:</label>
+                      <input type="email" class="form-control" placeholder="Enter email" id="email">
+                    </div>
+                    <div class="form-group">
+                      <label for="pwd">Password:</label>
+                      <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+                    </div>
+                    <h2>Demuestra que eres un humano</h2>
+                    <div class="form-group">
+                        <label for="sum">Suma 5+9</label>
+                        <input type="number" class="form-control" placeholder="suma..." id="sum">
+                      </div>
+                    <div class="form-group form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" required> Acepto
+                      </label>
+                    </div>
+                  </form>
                 </div>
 
                 <!-- Modal footer -->
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Enviar</button>
+                    <button id="butt" type="button" class="btn btn-success" data-dismiss="modal">Enviar</button>
                 </div>
 
             </div>
@@ -137,28 +129,32 @@
     </div>
 
     </div>
+  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
    <script>
-        /*     $(function () {
+            $(function () {
+
+           
                  $('#login').modal('show');
-                 $("login").on("hidden.bs.modal", function () {
+                 $("#login").on("hidden.bs.modal", function () {
                      submForm();
                  });
                  function submForm() {
-                     const resCorrecto = 13;
-                     const usuario = 'Enrico';
+                     const resCorrecto = 14;
+                     const usuario = 'yo@tu.es';
                      const pass = '123456'
-                     let suma = $('#resultado').val();
-                     let user = $('#user').val();
-                     let password = $('#password').val();
+                     let suma = $('#sum').val();
+                     let user = $('#email').val();
+                     let password = $('#pwd').val();
                      if (suma == resCorrecto && user == usuario && password == pass) {
-                         
+                       //  alert('correcto')
                      } else if (suma != resCorrecto){
                          $('#login').modal('show');
-                         
+                         // Añadir Mensaje de error suma
                      } else{
                          $('#login').modal('show');
+                         // Añadir Mensaje de error email o password
                      }
                  }
                 
@@ -166,7 +162,7 @@
                      $(this).hide(500);
                  })
      
-             })*/
+             })
     </script>
 </body>
 

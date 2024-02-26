@@ -25,15 +25,7 @@
         let numElegido = document.getElementById('numero').value -1;
         let lista = document.getElementsByTagName('li');
         let elemento =lista[numElegido].innerHTML;
-        console.log(elemento);
-        alert("Has elegido: " + elemento);
-       
         document.getElementById('info').innerHTML = "Has elegido: " + elemento;
-        for (i=0;i<lista.length; i++){
-            if (i==numElegido)
-            alert("Has elegido: " + elemento);
-        }
-        console.log($('#numero'))
     }
 </script>
 

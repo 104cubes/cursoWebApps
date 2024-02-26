@@ -30,7 +30,7 @@
     </style>
 </head>
 <body>
-   <h2>
+   <h2 id="primero">
     Hola, por seguridad vamos a perdirte que 
     respondas a esta pregunta:
 </h2>
@@ -51,8 +51,21 @@
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
+     
     $(function(){
-
+        let n=0;
+        for (let mivariable = 5;mivariable>=2;mivariable--) {
+            n++;
+            document.getElementById('primero').innerHTML=n;
+        }
+      /*  let a = 3;
+        let b = "3";
+        let c = a+Number(b);
+        if (a+b==6){
+            alert((c) + '   -- 1')
+        }else{
+            alert(c)
+        }*/
         function submForm(){
             const resCorrecto = 13;
             if ($('#resultado').val()!=resCorrecto){
