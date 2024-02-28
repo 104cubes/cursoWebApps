@@ -7,6 +7,8 @@
     <title>Document</title>
 </head>
 
+
+
 <body>
     <?php
     // Función para calcular el área de un triángulo
